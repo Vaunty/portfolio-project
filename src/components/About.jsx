@@ -1,5 +1,5 @@
 import React from "react";
-import { Tilt } from "react-tilt";
+import ParallaxTilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -8,32 +8,25 @@ import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
 const ServiceCard = ({ index, title, icon }) => (
-  <Tilt className='xs:w-[250px] w-full'>
+  <ParallaxTilt className='xs:w-[250px] w-full' tiltMaxAngleX={45} tiltMaxAngleY={45} scale={1} transitionSpeed={450}>
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
     >
-      <div
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
-      >
+      <div className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'>
         <img
           src={icon}
           alt='web-development'
           className='w-16 h-16 object-contain'
         />
-
         <h3 className='text-white text-[20px] font-bold text-center'>
           {title}
         </h3>
       </div>
     </motion.div>
-  </Tilt>
+  </ParallaxTilt>
 );
+
 
 const About = () => {
   return (
