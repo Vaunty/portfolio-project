@@ -23,6 +23,7 @@ import {
   jobit,
   tripguide,
   threejs,
+  portproj
 } from "../assets";
 
 export const navLinks = [
@@ -33,6 +34,18 @@ export const navLinks = [
   {
     id: "work",
     title: "Work",
+  },
+  {
+    id: "projects",
+    title: "Projects",
+  },
+  {
+    id: "feedbacks",
+    title: "Testimonials",
+  },
+  {
+    id: "resume",
+    title: "Resume",
   },
   {
     id: "contact",
@@ -104,11 +117,11 @@ const experiences = [
     company_name: "Grillestone",
     icon: starbucks,
     iconBg: "#383E56",
-    date: "August 2020 - April 2023",
+    date: "Aug 2020 - Apr 2023",
     points: [
       "Maintained consistency and quality of dishes, promptly communicating issues to kitchen staff.",
       "Exercised time management for customer orders within the food line and keen attention to detail to catch errors and inconsistencies before they reached customers.",
-      "Streamlined restaurant operations by monitoring order statuses and minimizing kitchen bottlenecks",
+      "Streamlined restaurant operations by monitoring order statuses and minimizing kitchen bottlenecks.",
     ],
   },
   {
@@ -116,11 +129,11 @@ const experiences = [
     company_name: "Old Bridge Highschool",
     icon: tesla,
     iconBg: "#E6DEDD",
-    date: "Sept 2022 - June 2023",
+    date: "Sept 2022 - Jun 2023",
     points: [
-      "Position only attained by students who maintained a 4.0 GPA within the subject",
-      "Assisted with pre-algebra/algebra assignments",
-      "Met about 3x a weekwith clients from the National Honors Society throughout the year",
+      "Position only attained by students who maintained a 4.0 GPA within the subject.",
+      "Assisted with pre-algebra/algebra assignments.",
+      "Met about 3x a weekwith clients from the National Honors Society throughout the year.",
     ],
   },
   {
@@ -130,9 +143,9 @@ const experiences = [
     iconBg: "#383E56",
     date: "Jan 2024 - Present",
     points: [
-      "Position only attained through Professor recommendation",
-      "Recommended based on exceptional performance within Data Structures and Computer Organization and Architecture Course",
-      "Hosted weekly tutoring and advisement sessions related to Computer Science",
+      "Position only attained through Professor recommendation.",
+      "Recommended based on exceptional performance within Data Structures and Computer Organization and Architecture Course.",
+      "Hosted weekly tutoring and advisement sessions related to Computer Science.",
     ],
   },
  
@@ -167,65 +180,33 @@ const testimonials = [
 
 const projects = [
   {
+    id: "java-bank",  // ✅ Unique ID
     name: "Java Bank",
-    description:
-      "Java Banking System developed using Agile Development practices.",
+    description: "Java Banking System developed using Agile Development practices.",
     tags: [
-      {
-        name: "Java",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "N/A",
-        color: "green-text-gradient",
-      },
-      {
-        name: "N/A",
-        color: "pink-text-gradient",
-      },
+      { name: "Java", color: "blue-text-gradient" },
+      { name: "Finance", color: "green-text-gradient" },
+      { name: "Agile", color: "pink-text-gradient" },
     ],
     image: "https://cdn-icons-png.flaticon.com/512/7826/7826512.png",
     source_code_link: "https://github.com/pujandesai6/AP-CSA-Bank-Project-8A",
   },
   {
-    name: "W.I.P",
-    description:
-      "N/A",
+    id: "wip-1",  // ✅ Unique ID
+    name: "Personal Portfolio Website",
+    description: "Portfolio website made with ThreeJS, React Three Fiber, and styled with TailwindCSS. Elements include 3d-Animated objects, and react-parallax-tilt cards.",
     tags: [
-      {
-        name: "",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "",
-        color: "green-text-gradient",
-      },
-      {
-        name: "",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: "https://e7.pngegg.com/pngimages/993/500/png-clipart-book-books-assorted-title-books-text-school-clipart-thumbnail.png",
-    source_code_link: "https://github.com/",
+      { name: "ThreeJS", color: "blue-text-gradient" },
+      { name: "React Three Fiber", color: "green-text-gradient" },
+      { name: "TailwindCSS", color: "pink-text-gradient" },],
+    image: portproj,
+    source_code_link: "https://github.com/Vaunty/portfolio-project",
   },
   {
+    id: "something-different",  // ✅ Unique ID
     name: "W.I.P",
-    description:
-      "N/A",
-    tags: [
-      {
-        name: "",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "",
-        color: "green-text-gradient",
-      },
-      {
-        name: "",
-        color: "pink-text-gradient",
-      },
-    ],
+    description: "N/A",
+    tags: [{ name: "Placeholder", color: "blue-text-gradient" }],
     image: "https://e7.pngegg.com/pngimages/993/500/png-clipart-book-books-assorted-title-books-text-school-clipart-thumbnail.png",
     source_code_link: "https://github.com/",
   },

@@ -1,21 +1,13 @@
 import React from "react";
 import ParallaxTilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
-
 import { styles } from "../styles";
 import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ProjectCard = ({
-  index,
-  name,
-  description,
-  tags,
-  image,
-  source_code_link,
-}) => {
+const ProjectCard = ({ index, name, description, tags, image, source_code_link, }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <ParallaxTilt
@@ -68,6 +60,9 @@ const ProjectCard = ({
 };
 
 const Works = () => {
+  // Add your GitHub profile URL here
+  const githubProfileLink = "https://github.com/Vaunty";
+  
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -80,21 +75,29 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
-          Following projects showcases my skills and experience through
-          real-world examples of my work. Each project is briefly described with
-          links to code repositories and live demos in it. It reflects my
-          ability to solve complex problems, work with different technologies,
-          and manage projects effectively.
+          Following projects showcases my skills and experience through real-world examples of my work. 
+          Each project is briefly described with links to code repositories and live demos in it. 
+          It reflects my ability to solve complex problems, work with different technologies, and manage projects effectively.
+          <span 
+            onClick={() => window.open(githubProfileLink, "_blank")}
+            className='inline-flex items-center ml-2 cursor-pointer'
+          >
+            <img 
+              src={github} 
+              alt='GitHub Profile' 
+              className='w-6 h-6 object-contain hover:opacity-80 transition-opacity'
+            />
+          </span>
         </motion.p>
       </div>
 
       <div className='mt-20 flex flex-wrap gap-7'>
-        {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
-        ))}
+      {projects.map((project, index) => (
+  <ProjectCard key={project.id} index={index} {...project} />
+))}
       </div>
     </>
   );
 };
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(Works, "projects");
